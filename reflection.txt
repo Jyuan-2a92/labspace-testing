@@ -1,0 +1,38 @@
+task1-python:
+    Most errors are made by typos, such as the test file want to use multiply() but there is only multiple(). Those kind of errors are really hard to find with manually checking, so the tests help with debugging the problem in the code.
+    There are three test functions all rely on is_even() function, and all three of them failed the test because of the bug in is_even(). I do not think it is wasting time to check all test functions after I fixed the is_even() but there is an extra time cost.
+
+    I think the typo error in the function name is way more hard than other defects. I usually direct read the body of the function without checking the name of it. I fixed it because I checked the test report again after I 100% sure there was not defect in the body part.
+
+    If I need to imporve it, I will add is_odd() instead of using is_even() multiple times. I was looking for is_odd() after I saw the test_odd failed but there is no is_odd().
+
+    My general experience with unit testing is all about writing test functions or passing the test functions that wrote by others. pytest is the only I can recall in my memory, other than that I do not have any experience of debugging tools and framworks.
+
+task2-python:
+    Those uncovered code path contains a lot of if statements are most likely to hide bugs, since there are not tested and blocking the rest of code.
+
+    I stratege of writing tests are focusing on branches, so there is no missed branch after I added --cov-branch argument in the test command.
+
+    Having extra information like coverage and branches are really helpful, especially for a large file size. In that case, I do not have to read every line for checking test coverage.
+
+    Reach 100% coverage and branches should be the top priority before finished coding.
+
+task3-ai:
+    The prompt I used: create unit test file for the uploaded file. use command like pytest --cov-branch -v for testing every branch and detecting defects. I should spesific more about what I have downloaded and ask the ai to tell me what I should download to run the test file.
+
+    Overall, the model provide a good direction of creating test file, like using unittest.mock to check the terminal output. Howver, this model made some silly mistakes like not defiended variables. Hence, I would not use this as the final edition of test file.
+
+    Since the quiz.py is pretty simple program so the AI-generated tests are efficient. I doubt it will generate usable content like this when the file is large. The coverage branch and report do not show up due to the undefined variables. Not every tests run so there is no data to report.
+
+    I never used AI tools for testing before, usually ask the AI for problem solving, such as finding bugs. Asking ai to generate tests is not efficient as my execption, but it still can reduce part of work.
+
+task4-agent:
+    I did not fully complete this task since the provided command seems only work for Mac not Windows. By running those command, I successfully run the claude code in the wsl but it does not able to access the task files such as the skills /test. I tried to copy the whole thing to claued code but it does not provide an acceptable output. By examine the message when the claude code is running, I think the ai agent is like a prompt generator for LLM.
+
+    The acceptance criteria I added focuses on overall process experience, such as provde error message when user did wrong thing. 
+
+    If I had more time, I want to ask the agent to improve the criteria I made and check the impact it can make.
+
+    In general, I think I will increase the usage of AI for testing and maintenance, and I will check the output from ai instead of just copying and pasting the output since I do not fully believe it.
+
+
